@@ -13,7 +13,15 @@ class FurnitureController extends Controller
     }
 
     function create(Request $request){
-        echo $request->get('name');
+        $item = new Furniture();
+        $item->name = $request->input('name');
+        $item->price = $request->input('price');
+        $item->avatar = $request->input('avatar');
+        $item->code = $request->input('code');
+        $item->save();
+        return http_response_code(201);
     }
+
+    function search(){}
 
 }

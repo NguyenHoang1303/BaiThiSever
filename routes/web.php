@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/furniture', [FurnitureController::class,'getAll']);
-Route::get('/furniture/create', [FurnitureController::class,'create']);
+Route::post('/furniture/create', [FurnitureController::class,'create']);
+Route::get('/furniture/search', [FurnitureController::class,'search']);
